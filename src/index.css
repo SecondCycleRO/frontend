@@ -1,0 +1,16 @@
+:root {
+    --var1:85E8AD;
+    --var2:00A9E0;
+    --var3:CCCCCC;
+    --var4:494949;
+  }
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,100;1,800&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+body{
+    margin: 0;
+}
+
