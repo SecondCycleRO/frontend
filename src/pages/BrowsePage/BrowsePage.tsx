@@ -7,7 +7,7 @@ import {
   Container,
   Label,
   ProductsContainer,
-  LoaderContainer
+  LoaderContainer,
 } from './BrowsePage.styled';
 
 export default function BrowsePage() {
