@@ -13,7 +13,7 @@ export const useLogin = () => {
   const [error, setError] = useState<string | null>(null);
 
   const login = async (
-    credentials: LoginCredentials
+    credentials: LoginCredentials,
   ): Promise<string | void> => {
     setLoading(true);
     setError(null);
@@ -21,7 +21,7 @@ export const useLogin = () => {
     try {
       const response = await axiosInstance.post<LoginResponse>(
         '/users/login',
-        credentials
+        credentials,
       );
       const { token } = response.data;
 
@@ -35,7 +35,7 @@ export const useLogin = () => {
         if (err.response) {
           setError(
             err.response.data.message ||
-              'Failed to log in. Please check your credentials.'
+              'Failed to log in. Please check your credentials.',
           );
         } else if (err.request) {
           setError('No response received. Please try again.');

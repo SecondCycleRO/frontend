@@ -11,7 +11,7 @@ import {
   ButtonBox,
   MainCard,
   StyledLink,
-  Label
+  Label,
 } from '../SignUp/SignUp.styled';
 import { UserContext } from '../../context/UserContext';
 import BlueLogo from 'src/assets/svg/BlueLogo';
@@ -82,7 +82,7 @@ export default function Login() {
         userContext.setUser({
           email: decoded.email!,
           username: decoded.username!,
-          role: decoded.role as 'buyer' | 'seller' | 'admin'
+          role: decoded.role as 'buyer' | 'seller' | 'admin',
         });
         userContext.isAuthenticated = true;
       }
@@ -117,7 +117,7 @@ export default function Login() {
           </ButtonBox>
           <br />
 
-          <StyledLink to="/signup">Don't have an account?</StyledLink>
+          <StyledLink to="/signup">Don&apos;t have an account?</StyledLink>
         </FormCard>
       </MainCard>
     </>

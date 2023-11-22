@@ -7,7 +7,7 @@ import { CartProvider } from './context/CartContext';
 import './index.css';
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById('root') as HTMLElement,
 );
 root.render(
   <BrowserRouter>
@@ -18,5 +18,5 @@ root.render(
         </CartProvider>
       </UserProvider>
     </React.StrictMode>
-  </BrowserRouter>
+  </BrowserRouter>,
 );

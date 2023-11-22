@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default function CloseIcon() {
   return (
@@ -9,11 +9,11 @@ export default function CloseIcon() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="22.5" cy="22.5" r="21" stroke="#00A9E0" stroke-width="3" />
+      <circle cx="22.5" cy="22.5" r="21" stroke="#00A9E0" strokeWidth="3" />
       <path
         d="M11 23.5H35.5M35.5 23.5L27.5 15.5M35.5 23.5L27.5 31.5"
         stroke="#00A9E0"
-        stroke-width="2"
+        strokeWidth="2"
       />
     </svg>
   );

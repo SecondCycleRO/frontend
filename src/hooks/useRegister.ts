@@ -32,7 +32,7 @@ export const useRegister = () => {
           } else if (err.response.data && 'message' in err.response.data) {
             setError(
               err.response.data.message ||
-                'Failed to register. Please try again.'
+                'Failed to register. Please try again.',
             );
           } else {
             setError('Failed to register. Please try again.');

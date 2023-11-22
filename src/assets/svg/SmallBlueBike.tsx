@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-export default function () {
+export default function SmallBlueBike() {
   return (
     <svg
       width="58"

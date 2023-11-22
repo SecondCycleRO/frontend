@@ -11,7 +11,7 @@ export const useProduct = (productId: string) => {
     const fetchProduct = async () => {
       try {
         const response = await axiosInstance.get<IProduct>(
-          `/products/${productId}`
+          `/products/${productId}`,
         );
         setProduct(response.data);
       } catch (err) {

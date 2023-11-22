@@ -5,12 +5,12 @@ import {
   CardContent,
   CardActions,
   Typography,
-  Button
+  Button,
 } from '@mui/material';
 import {
   StyledCard,
   NameTypography,
-  AddToCartButton
+  AddToCartButton,
 } from './ProductCard.styles';
 
 interface ProductCardProps {
@@ -22,7 +22,7 @@ interface ProductCardProps {
 export const ProductCard: React.FC<ProductCardProps> = ({
   name,
   price,
-  imageUrl
+  imageUrl,
 }) => {
   const displayImage = imageUrl[0];
   const { dispatch } = useCart();

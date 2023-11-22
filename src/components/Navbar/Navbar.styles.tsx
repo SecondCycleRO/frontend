@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 export const Container = styled.div<{ scroll: number }>`
   display: flex;
@@ -15,7 +15,7 @@ export const Container = styled.div<{ scroll: number }>`
   z-index: 5;
   transition: 250ms;
   opacity: ${(props) => (props.scroll > 40 ? 1 : 0)};
-  pointer-events: ${(props) => (props.scroll > 40 ? "default" : "none")};
+  pointer-events: ${(props) => (props.scroll > 40 ? 'default' : 'none')};
 `;
 
 export const RightElements = styled.div`

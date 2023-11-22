@@ -1,6 +1,6 @@
 import React from 'react';
 
-type Props = {};
+type Props = object;
 
 const ProductPage = (props: Props) => {
   return <div>ProductPage</div>;
