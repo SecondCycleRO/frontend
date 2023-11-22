@@ -50,23 +50,22 @@ To get the frontend running locally:
 
 ## Structure
 
-- `src/`: This folder is the main container of all the code inside your application.
-- `src/components/`: Contains all your React components.
-- `src/pages/`: Components that represent a page accessible via routing.
-- `src/App.tsx`: The main React component that provides the overall page structure.
-- `src/index.tsx`: The entry point for your React application.
-- `src/types/`: TypeScript interfaces or classes representing your data types.
-- `src/api/`: Services and utilities for API requests.
-- `src/assets/`: Folder containing assets like images.
-- `src/context/`: Folder containing contexts used across the app.
-- `src/hooks/`: Folder containing custom hooks.
+- `src/`: This directory serves as the primary container for all code within the application.
+- `src/components/`: Contains all React components used in the app.
+- `src/pages/`: Contains components that represent pages accessible via routing within the app.
+- `src/App.tsx`: The main React component of the app, providing the overall structure for each page.
+- `src/index.tsx`: The entry point for the React application.
+- `src/types/`: Includes TypeScript interfaces or classes that define the app's data types.
+- `src/api/`: Comprises services and utilities for handling API requests in the app.
+- `src/assets/`: A folder for storing assets such as images used in the app.
+- `src/context/`: This directory contains contexts utilized throughout the application.
+- `src/hooks/`: A folder dedicated to custom hooks employed in the app.
 
 ## Built With
 
 - [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
 - [TypeScript](https://www.typescriptlang.org/) - Typed superset of JavaScript that compiles to plain JavaScript.
-- [Create React App](https://create-react-app.dev/) - An officially supported way to create single-page React applications.
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct.
+Please read [CONTRIBUTING.md](https://github.com/SecondCycleRO/.github/blob/master/CONTRIBUTING.MD) for details on our code of conduct.
