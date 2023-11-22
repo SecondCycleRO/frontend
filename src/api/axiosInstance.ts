@@ -4,7 +4,7 @@ const logError = (error: AxiosError) => {
   if (error.response) {
     console.error(
       `Backend returned code ${error.response.status}, body was:`,
-      error.response.data
+      error.response.data,
     );
   } else if (error.request) {
     console.error('No response received:', error.request);
@@ -29,7 +29,7 @@ axiosInstance.interceptors.request.use(
   (error: AxiosError) => {
     logError(error);
     return Promise.reject(error);
-  }
+  },
 );
 
 axiosInstance.interceptors.response.use(
@@ -37,7 +37,7 @@ axiosInstance.interceptors.response.use(
   (error: AxiosError) => {
     logError(error);
     return Promise.reject(error);
-  }
+  },
 );
 
 export default axiosInstance;

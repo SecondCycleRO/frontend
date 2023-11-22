@@ -11,7 +11,7 @@ interface CartContextType {
 }
 
 export const CartContext = createContext<CartContextType | undefined>(
-  undefined
+  undefined,
 );
 
 function cartReducer(state: CartState, action: CartAction): CartState {
@@ -19,7 +19,7 @@ function cartReducer(state: CartState, action: CartAction): CartState {
     case 'ADD_ITEM':
       return {
         ...state,
-        items: [...state.items, action.payload]
+        items: [...state.items, action.payload],
       };
     default:
       return state;

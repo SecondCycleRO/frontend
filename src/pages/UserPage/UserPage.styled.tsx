@@ -10,7 +10,7 @@ export const LeftSideMenu = styled.ul`
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  
+
   width: 25vw;
   height: 100vh;
   background-color: grey;
@@ -27,11 +27,11 @@ export const ListMember = styled.li`
   list-style-type: none;
   cursor: pointer;
   color: black;
-  
+
   /* Remove link styles */
   a {
-  text-decoration: none;
-}
+    text-decoration: none;
+  }
 `;
 export const StyledLink = styled(Link)`
   font-size: 1.2rem;
