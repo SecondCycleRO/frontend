@@ -14,10 +14,18 @@ export interface ITransaction {
 }
 
 export interface IProduct {
+  _id: string;
   title: string;
   description: string;
   price: number;
   category: 'bicycle' | 'scooter';
   condition: 'new' | 'used';
   imageUrl: string[];
+}
+
+interface ICartItem {
+  id: string;
+  name: string;
+  price: number;
+  imageUrl: string;
 }

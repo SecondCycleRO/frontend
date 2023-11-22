@@ -1,9 +1,12 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
+// import { useProduct } from 'src/hooks/useProduct';
 
-type Props = object;
+const ProductPage = () => {
+  const { productId } = useParams();
+  // const { product, loading, error } = useProduct(productId);
 
-const ProductPage = (props: Props) => {
-  return <div>ProductPage</div>;
+  return <div>{productId}</div>;
 };
 
 export default ProductPage;

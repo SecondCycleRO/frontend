@@ -1,5 +1,4 @@
-import axios, { AxiosError, AxiosResponse } from 'axios';
-
+import axios, { AxiosError, AxiosResponse, AxiosRequestConfig } from 'axios';
 const logError = (error: AxiosError) => {
   if (error.response) {
     console.error(
@@ -18,10 +17,11 @@ const axiosInstance = axios.create({
 });
 
 axiosInstance.interceptors.request.use(
-  (config: any) => {
+  //@ts-ignore
+  (config: AxiosRequestConfig) => {
     const token = localStorage.getItem('token');
     if (token) {
-      config.headers = config.headers ?? {};
+      config.headers = config.headers || {};
       config.headers['Authorization'] = `Bearer ${token}`;
     }
     return config;

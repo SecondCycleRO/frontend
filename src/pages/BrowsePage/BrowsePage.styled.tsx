@@ -8,24 +8,37 @@ export const Container = styled.section`
 
 export const Label = styled.header`
   background: var(--secondary-color, ${secondaryColor});
-  width: max-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  width: 100%;
+  display: block;
+  text-align: center;
   padding: 1rem;
-  border-radius: 0 0.3125rem 0.3125rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   h2 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
-    transition: color 0.3s ease;
+    font-weight: 600;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: #000000;
+    margin: 0.5rem 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    span {
+      font-weight: 400;
+      font-size: 0.8em;
+    }
   }
-  span {
+
+  p {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-size: clamp(0.75rem, 1.5vw, 1rem);
+    font-weight: 400;
+    font-size: clamp(0.875rem, 2vw, 1.25rem);
+    color: #000000;
+    margin: 0.25rem 0;
+    opacity: 0.85;
+  }
+
+  @media (min-width: 768px) {
+    padding: 1.5rem 0;
   }
 `;
 
