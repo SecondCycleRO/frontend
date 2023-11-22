@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useProducts } from 'src/hooks/useProducts';
 import { TailSpin } from 'react-loader-spinner';
 import Navbar from '../../components/Navbar/Navbar';
@@ -11,7 +12,12 @@ import {
 } from './BrowsePage.styled';
 
 export default function BrowsePage() {
+  const navigate = useNavigate();
   const { products, loading, error } = useProducts();
+
+  const goToProductPage = (productId: string) => {
+    navigate(`/product/${productId}`);
+  };
 
   const renderContent = () => {
     if (loading) {
@@ -35,9 +41,11 @@ export default function BrowsePage() {
         {products.map((product) => (
           <ProductCard
             key={product._id}
+            id={product._id}
             name={product.title}
             price={product.price}
             imageUrl={product.imageUrl}
+            onCardClick={goToProductPage}
           />
         ))}
       </ProductsContainer>

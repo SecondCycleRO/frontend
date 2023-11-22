@@ -22,3 +22,10 @@ export interface IProduct {
   condition: 'new' | 'used';
   imageUrl: string[];
 }
+
+interface ICartItem {
+  id: string;
+  name: string;
+  price: number;
+  imageUrl: string;
+}

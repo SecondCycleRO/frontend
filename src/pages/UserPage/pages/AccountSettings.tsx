@@ -35,7 +35,9 @@ export default function AccountSettings() {
       case 'username': {
         return (
           <InputBox
-            onChange={(event: any) => setUserName(event.target.value)}
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+              setUserName(event.target.value)
+            }
             placeholder="New Username"
             type="string"
           />
@@ -44,7 +46,9 @@ export default function AccountSettings() {
       case 'email': {
         return (
           <InputBox
-            onChange={(event: any) => setEmail(event.target.value)}
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+              setEmail(event.target.value)
+            }
             placeholder="New Email"
             type="text"
           />
@@ -53,7 +57,9 @@ export default function AccountSettings() {
       case 'phoneNumber': {
         return (
           <InputBox
-            onChange={(event: any) => setPhoneNumber(event.target.value)}
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+              setPhoneNumber(event.target.value)
+            }
             placeholder="New Phone Number"
             type="text"
           />
