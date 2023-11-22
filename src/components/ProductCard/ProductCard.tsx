@@ -1,12 +1,6 @@
 import React from 'react';
 import { useCart, CartContext } from 'src/context/CartContext';
-import {
-  CardMedia,
-  CardContent,
-  CardActions,
-  Typography,
-  Button,
-} from '@mui/material';
+import { CardMedia, CardContent, CardActions, Typography } from '@mui/material';
 import {
   StyledCard,
   NameTypography,

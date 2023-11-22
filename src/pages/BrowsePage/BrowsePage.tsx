@@ -25,16 +25,16 @@ export default function BrowsePage() {
     if (error) {
       return (
         <LoaderContainer>
-          <p>No items found, please try again!</p>
+          <h3>No items found, please try again!</h3>
         </LoaderContainer>
       );
     }
 
     return (
       <ProductsContainer>
-        {products.map((product, index) => (
+        {products.map((product) => (
           <ProductCard
-            key={index}
+            key={product._id}
             name={product.title}
             price={product.price}
             imageUrl={product.imageUrl}
@@ -48,11 +48,11 @@ export default function BrowsePage() {
     <Container>
       <Navbar />
       <Label>
-        <span>we insure</span>
+        <p>We insure</p>
         <h2>
           QUALITY <span>and</span> MAINTAINABILITY
         </h2>
-        <span>for the bikes that we sell</span>
+        <p>for the bikes that we sell</p>
       </Label>
       {renderContent()}
     </Container>

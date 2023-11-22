@@ -8,9 +8,10 @@ export const StyledCard = styled(Card)`
   box-shadow: 3;
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
   &:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
   }
 `;
 
@@ -33,7 +34,7 @@ export const AddToCartButton = styled('button')`
   margin-top: auto;
   padding: 10px 20px;
   transition:
-    background-color 0.3s,
+    background-color 0.2s,
     color 0.3s;
 
   &:hover {
