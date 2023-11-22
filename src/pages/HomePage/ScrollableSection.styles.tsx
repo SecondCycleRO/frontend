@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { secondaryColor } from 'src/const';
+import { secondaryColor } from '../../const';
 
 export const Container = styled.div`
   margin-top: 10vh;

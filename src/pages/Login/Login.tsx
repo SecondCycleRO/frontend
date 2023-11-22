@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { TailSpin } from 'react-loader-spinner';
 import { jwtDecode } from 'jwt-decode';
-import { DecodedToken } from 'src/types/api';
+import { DecodedToken } from '../../types/api';
 import {
   FormCard,
   InputBox,
@@ -14,9 +14,9 @@ import {
   Label,
 } from '../SignUp/SignUp.styled';
 import { UserContext } from '../../context/UserContext';
-import BlueLogo from 'src/assets/svg/BlueLogo';
+import BlueLogo from '../../assets/svg/BlueLogo';
 import Navbar from '../../components/Navbar/Navbar';
-import { useLogin } from 'src/hooks/useLogin';
+import { useLogin } from '../../hooks/useLogin';
 
 export default function Login() {
   const navigate = useNavigate();
