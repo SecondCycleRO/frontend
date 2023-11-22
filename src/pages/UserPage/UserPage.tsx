@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 import React, { useContext } from 'react';
 import { UserContext } from '../../context/UserContext';
-import Navbar from 'src/components/Navbar/Navbar';
+import Navbar from '../../components/Navbar/Navbar';
 import { useNavigate } from 'react-router';
 import {
   LeftSideMenu,

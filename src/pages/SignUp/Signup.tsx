@@ -2,7 +2,7 @@ import React, { useState, useEffect, ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { TailSpin } from 'react-loader-spinner';
-import { useRegister } from 'src/hooks/useRegister';
+import { useRegister } from '../../hooks/useRegister';
 import {
   FormCard,
   InputBox,
@@ -13,7 +13,7 @@ import {
   DropdownContainer,
   Label,
 } from './SignUp.styled';
-import BlueLogo from 'src/assets/svg/BlueLogo';
+import BlueLogo from '../../assets/svg/BlueLogo';
 import Navbar from '../../components/Navbar/Navbar';
 
 export default function Signup() {

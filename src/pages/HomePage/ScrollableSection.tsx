@@ -6,10 +6,10 @@ import {
   LeftSubContainer,
   BikerAnimationContainer,
 } from './ScrollableSection.styles';
-import SmallBlueBike from 'src/assets/svg/SmallBlueBike';
-import SmallBlueRocket from 'src/assets/svg/SmallBlueRocket';
-import SmallBlueCircleArrow from 'src/assets/svg/SmallBlueCircleArrow';
-import BikerWithBike from 'src/assets/svg/BikerWithBike';
+import SmallBlueBike from '../../assets/svg/SmallBlueBike';
+import SmallBlueRocket from '../../assets/svg/SmallBlueRocket';
+import SmallBlueCircleArrow from '../../assets/svg/SmallBlueCircleArrow';
+import BikerWithBike from '../../assets/svg/BikerWithBike';
 
 export default function ScrollableSection() {
   const [scroll, setScroll] = useState(0);

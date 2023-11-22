@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import { FormCard, InputBox } from 'src/pages/SignUp/SignUp.styled';
+import React, { useState } from 'react';
+import { FormCard, InputBox } from '../../SignUp/SignUp.styled';
 import { useContext } from 'react';
-import { UserContext } from 'src/context/UserContext';
+import { UserContext } from '../../../context/UserContext';
 import { Button } from '@mui/material';
 import axios from 'axios';
-import axiosInstance from 'src/api/axiosInstance';
+import axiosInstance from '../../../api/axiosInstance';
 
 export default function AccountSettings() {
   const [username, setUserName] = useState('');
