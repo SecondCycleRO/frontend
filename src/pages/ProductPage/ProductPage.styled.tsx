@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Paper, Button } from '@mui/material';
+import { Paper } from '@mui/material';
 
 export const Container = styled.div`
   padding: 2rem;
@@ -38,28 +38,25 @@ export const Sidebar = styled(Paper)`
   flex-direction: column;
   justify-content: center;
   height: 30rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
 
   .MuiTypography-h4 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
     font-weight: 600;
   }
 
   .MuiTypography-h5 {
     color: #333;
-    margin-bottom: 0.25rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .MuiTypography-subtitle1 {
     color: #666;
-    margin-bottom: 1rem;
-  }
-
-  .MuiButton-containedPrimary {
-    padding: 0.75rem 1.5rem;
     font-size: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5rem;
   }
 `;
 
@@ -68,11 +65,11 @@ export const AddToCartButton = styled.button`
   color: black;
   width: 100%;
   font-weight: bold;
-  border-radius: 20px;
+  border-radius: 2rem;
   border: 1px solid black;
   align-self: center;
-  margin-top: 5rem;
-  padding: 10px 20px;
+  margin-top: auto;
+  padding: 1rem 2rem;
   cursor: pointer;
   transition:
     background-color 0.2s,
@@ -83,7 +80,7 @@ export const AddToCartButton = styled.button`
   &:hover {
     background-color: black;
     color: white;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
   }
 `;
@@ -91,5 +88,5 @@ export const AddToCartButton = styled.button`
 export const DescriptionSection = styled.div`
   padding: 2rem;
   background-color: #f5f5f5;
-  border-radius: 4px;
+  border-radius: 0.5rem;
 `;

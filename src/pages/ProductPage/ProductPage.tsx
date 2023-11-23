@@ -8,6 +8,7 @@ import { TailSpin } from 'react-loader-spinner';
 import Navbar from '../../components/Navbar/Navbar';
 import Carousel from 'react-material-ui-carousel';
 import CarouselItem from 'src/components/CarouselItem/CarouselItem';
+import TechnicalSpecifications from 'src/components/TechnicalSpecifications/TechnicalSpecifications';
 import {
   Container,
   TopSection,
@@ -92,6 +93,7 @@ const ProductPage = () => {
               </Typography>
               <Typography variant="body1">{product.description}</Typography>
             </DescriptionSection>
+            <TechnicalSpecifications />
           </>
         ) : (
           <Typography>Product not found</Typography>
