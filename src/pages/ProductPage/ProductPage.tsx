@@ -2,6 +2,8 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useProduct } from '../../hooks/useProduct';
 import Navbar from '../../components/Navbar/Navbar';
+import Carousel from 'react-material-ui-carousel';
+import CarouselItem from 'src/components/CarouselItem/CarouselItem';
 import {
   Container,
   TopSection,
@@ -18,13 +20,23 @@ const ProductPage = () => {
   const { productId } = useParams<{ productId: string }>();
   const { product, loading, error } = useProduct(productId || '');
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  };
+
   if (!productId) {
     return <Container>Product not found</Container>;
   }
 
   return (
     <Container>
-      <Navbar />
+      {/* <Navbar /> */}
       {loading ? (
         <LoaderContainer>
           <CircularProgress />
@@ -37,9 +49,15 @@ const ProductPage = () => {
         <>
           <TopSection>
             <ImageCarousel>
-              {product.imageUrl.map((image, index) => (
-                <Image key={index} src={image} alt={product.title} />
-              ))}
+              <Carousel>
+                {product.imageUrl.map((image, index) => (
+                  <CarouselItem
+                    key={index}
+                    image={image}
+                    altText={product.title}
+                  />
+                ))}
+              </Carousel>
             </ImageCarousel>
             <Sidebar>
               <Typography variant="h4">{product.title}</Typography>
