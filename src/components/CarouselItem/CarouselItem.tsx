@@ -2,10 +2,22 @@ import React from 'react';
 import { Paper } from '@mui/material';
 import styled from '@emotion/styled';
 
+const ImageContainer = styled(Paper)`
+  width: 100%;
+  padding-top: 56.25%;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+`;
+
 const Image = styled.img`
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 100%;
   height: auto;
-  border-radius: 4px;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
 `;
 
 interface CarouselItemProps {
@@ -15,9 +27,9 @@ interface CarouselItemProps {
 
 const CarouselItem: React.FC<CarouselItemProps> = ({ image, altText }) => {
   return (
-    <Paper>
+    <ImageContainer>
       <Image src={image} alt={altText} />
-    </Paper>
+    </ImageContainer>
   );
 };
 

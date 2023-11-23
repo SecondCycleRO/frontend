@@ -1,8 +1,9 @@
 import styled from '@emotion/styled';
-import { Paper } from '@mui/material';
+import { Paper, Button } from '@mui/material';
 
 export const Container = styled.div`
   padding: 2rem;
+  margin-top: 4rem;
 `;
 
 export const LoaderContainer = styled.div`
@@ -15,12 +16,12 @@ export const LoaderContainer = styled.div`
 export const TopSection = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   margin-bottom: 2rem;
 `;
 
 export const ImageCarousel = styled.div`
   flex: 3;
-  /* Carousel styling here, you can use a package like 'react-slick' */
 `;
 
 export const Image = styled.img`
@@ -35,11 +36,56 @@ export const Sidebar = styled(Paper)`
   margin-left: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  justify-content: center;
+  height: 30rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+
+  .MuiTypography-h4 {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .MuiTypography-h5 {
+    color: #333;
+    margin-bottom: 0.25rem;
+  }
+
+  .MuiTypography-subtitle1 {
+    color: #666;
+    margin-bottom: 1rem;
+  }
+
+  .MuiButton-containedPrimary {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 export const AddToCartButton = styled.button`
-  margin-top: 1rem;
+  background-color: white;
+  color: black;
+  width: 100%;
+  font-weight: bold;
+  border-radius: 20px;
+  border: 1px solid black;
+  align-self: center;
+  margin-top: 5rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.3s,
+    box-shadow 0.2s,
+    transform 0.2s;
+
+  &:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
 `;
 
 export const DescriptionSection = styled.div`
