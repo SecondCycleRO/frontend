@@ -1,6 +1,7 @@
 import React from 'react';
 import { useCart } from 'src/context/CartContext';
 import { ICartItem } from 'src/types/interfaces';
+import { toast } from 'react-toastify';
 import { CardMedia, CardContent, CardActions, Typography } from '@mui/material';
 import {
   StyledCard,
@@ -33,8 +34,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
   const handleAddToCart = (event: React.MouseEvent) => {
     event.stopPropagation();
-    const item: ICartItem = { id, name, price, imageUrl: displayImage };
-    dispatch({ type: 'ADD_ITEM', payload: item });
+    if (price > 0 && name && imageUrl.length > 0) {
+      const item: ICartItem = { id, name, price, imageUrl: displayImage };
+      dispatch({ type: 'ADD_ITEM', payload: item });
+      toast.success('Item added to cart');
+    } else {
+      toast.error('This product is currently not available.');
+    }
   };
 
   return (
