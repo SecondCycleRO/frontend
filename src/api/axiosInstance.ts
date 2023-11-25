@@ -1,10 +1,9 @@
-import axios, { AxiosError, AxiosResponse } from 'axios';
-
+import axios, { AxiosError, AxiosResponse, AxiosRequestConfig } from 'axios';
 const logError = (error: AxiosError) => {
   if (error.response) {
     console.error(
       `Backend returned code ${error.response.status}, body was:`,
-      error.response.data
+      error.response.data,
     );
   } else if (error.request) {
     console.error('No response received:', error.request);
@@ -18,10 +17,11 @@ const axiosInstance = axios.create({
 });
 
 axiosInstance.interceptors.request.use(
-  (config: any) => {
+  //@ts-ignore
+  (config: AxiosRequestConfig) => {
     const token = localStorage.getItem('token');
     if (token) {
-      config.headers = config.headers ?? {};
+      config.headers = config.headers || {};
       config.headers['Authorization'] = `Bearer ${token}`;
     }
     return config;
@@ -29,7 +29,7 @@ axiosInstance.interceptors.request.use(
   (error: AxiosError) => {
     logError(error);
     return Promise.reject(error);
-  }
+  },
 );
 
 axiosInstance.interceptors.response.use(
@@ -37,7 +37,7 @@ axiosInstance.interceptors.response.use(
   (error: AxiosError) => {
     logError(error);
     return Promise.reject(error);
-  }
+  },
 );
 
 export default axiosInstance;

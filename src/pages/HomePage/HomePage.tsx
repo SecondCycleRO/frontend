@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   ButtonsContainer,
   Header,
@@ -5,7 +6,7 @@ import {
   HeroTitle,
   PageContainer,
   ParallaxContainer,
-  Stripe
+  Stripe,
 } from './HomePage.styled';
 // @ts-ignore
 import { Link } from 'react-router-dom';

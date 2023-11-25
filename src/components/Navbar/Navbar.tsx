@@ -8,7 +8,7 @@ import {
   List,
   ListItem,
   ListItemButton,
-  ListItemText
+  ListItemText,
 } from '@mui/material';
 import BlueLogo from 'src/assets/svg/BlueLogo';
 import CloseIcon from 'src/assets/svg/CloseIcon';
@@ -18,7 +18,7 @@ import { useNavigate } from 'react-router';
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
 export default function Navbar({
-  topTransparent = false
+  topTransparent = false,
 }: {
   topTransparent?: boolean;
 }) {
@@ -27,7 +27,7 @@ export default function Navbar({
     top: false,
     left: false,
     bottom: false,
-    right: false
+    right: false,
   });
 
   const navigate = useNavigate();
@@ -49,7 +49,7 @@ export default function Navbar({
         sx={{
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'space-evenly'
+          justifyContent: 'space-evenly',
         }}
       >
         <BlueLogo />
@@ -66,8 +66,8 @@ export default function Navbar({
           '& li': {
             marginBottom: '15px',
 
-            '&:hover': { background: primaryColor, color: 'white' }
-          }
+            '&:hover': { background: primaryColor, color: 'white' },
+          },
         }}
       >
         <ListItem key={'HomeBtn'} disablePadding>
@@ -75,7 +75,7 @@ export default function Navbar({
             <ListItemText primary={'Home'} />
           </ListItemButton>
         </ListItem>
-        
+
         <ListItem key={'HomeBtn'} disablePadding>
           <ListItemButton onClick={() => navigate('/user')}>
             <ListItemText primary={'Profile'} />

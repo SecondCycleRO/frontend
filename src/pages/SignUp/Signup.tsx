@@ -2,7 +2,7 @@ import React, { useState, useEffect, ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { TailSpin } from 'react-loader-spinner';
-import { useRegister } from 'src/hooks/useRegister';
+import { useRegister } from '../../hooks/useRegister';
 import {
   FormCard,
   InputBox,
@@ -11,9 +11,9 @@ import {
   MainCard,
   StyledLink,
   DropdownContainer,
-  Label
+  Label,
 } from './SignUp.styled';
-import BlueLogo from 'src/assets/svg/BlueLogo';
+import BlueLogo from '../../assets/svg/BlueLogo';
 import Navbar from '../../components/Navbar/Navbar';
 
 export default function Signup() {
@@ -60,10 +60,10 @@ export default function Signup() {
   };
 
   const renderInput = (
-    input_type: 'Username' | 'Email' | 'Password' | 'Confirm Password'
+    input_type: 'Username' | 'Email' | 'Password' | 'Confirm Password',
   ) => {
     let value: string, onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-    let inputName = input_type.toLowerCase().replace(' ', '_');
+    const inputName = input_type.toLowerCase().replace(' ', '_');
 
     switch (inputName) {
       case 'username':

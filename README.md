@@ -1,46 +1,71 @@
-# Getting Started with Create React App
+# Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the frontend React application for the SecondCycle platform, providing the user interface and client-side logic.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+These instructions will help you set up the project locally for development and testing purposes.
 
-### `npm start`
+### Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Make sure you have the following installed:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en/)
+- [npm](https://npmjs.com/) (Node Package Manager)
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get the frontend running locally:
 
-### `npm run build`
+1. **Clone the repository:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   git clone git@github.com:SecondCycleRO/frontend.git
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install dependencies:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+3. **Set up environment variables:**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   Create a `.env` file in the root of the `frontend` directory with the following content, replacing values as appropriate:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```env
+   REACT_APP_API_BASE_URL=http://localhost:3010/api
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. **Run the application:**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   ```bash
+   npm start
+   ```
 
-## Learn More
+   This runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   The page will reload if you make edits. You will also see any lint errors in the console.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Structure
+
+- `src/`: This directory serves as the primary container for all code within the application.
+- `src/components/`: Contains all React components used in the app.
+- `src/pages/`: Contains components that represent pages accessible via routing within the app.
+- `src/App.tsx`: The main React component of the app, providing the overall structure for each page.
+- `src/index.tsx`: The entry point for the React application.
+- `src/types/`: Includes TypeScript interfaces or classes that define the app's data types.
+- `src/api/`: Comprises services and utilities for handling API requests in the app.
+- `src/assets/`: A folder for storing assets such as images used in the app.
+- `src/context/`: This directory contains contexts utilized throughout the application.
+- `src/hooks/`: A folder dedicated to custom hooks employed in the app.
+
+## Built With
+
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+- [TypeScript](https://www.typescriptlang.org/) - Typed superset of JavaScript that compiles to plain JavaScript.
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://github.com/SecondCycleRO/.github/blob/master/CONTRIBUTING.MD) for details on our code of conduct.

@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import { secondaryColor } from "src/const";
+import styled from '@emotion/styled';
+import { secondaryColor } from '../../const';
 
 export const Container = styled.div`
   margin-top: 10vh;
@@ -25,7 +25,7 @@ export const HowItWorksContainer = styled.div`
 
   h2 {
     font-weight: 1000;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 3rem !important;
   }
 
@@ -35,7 +35,7 @@ export const HowItWorksContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     svg {
       width: 25px;
@@ -57,13 +57,13 @@ export const RightSubContainer = styled.div`
 
   h2 {
     font-weight: 1000;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 3rem !important;
     margin: 5px;
   }
   span {
     font-weight: 300;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
 `;
 
@@ -79,13 +79,13 @@ export const LeftSubContainer = styled.div`
   border-radius: 0 5px 5px 0;
   h2 {
     font-weight: bold;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 3rem !important;
     margin: 5px;
   }
   span {
     font-weight: 300;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
 `;
 
@@ -97,7 +97,7 @@ export const BikerAnimationContainer = styled.div<{
   top: 50px;
   height: 2px;
   transition: 1.2s;
-  left: ${(props) => (props.scrollPosition >= props.points[1] ? "55%" : 0)};
+  left: ${(props) => (props.scrollPosition >= props.points[1] ? '55%' : 0)};
   max-width: 50vw;
   svg {
     max-width: 100%;
@@ -122,7 +122,7 @@ export const BikerAnimationContainer = styled.div<{
       transform-box: fill-box;
       transform-origin: center;
       transform: scale(
-        ${(props) => (props.scrollPosition >= props.points[2] ? ".8" : 1)}
+        ${(props) => (props.scrollPosition >= props.points[2] ? '.8' : 1)}
       );
     }
 
@@ -132,7 +132,7 @@ export const BikerAnimationContainer = styled.div<{
       transform-origin: center;
       transform: translate(
         ${(props) =>
-          props.scrollPosition >= props.points[2] ? "10px, -10px" : 0}
+          props.scrollPosition >= props.points[2] ? '10px, -10px' : 0}
       );
     }
 
@@ -142,7 +142,7 @@ export const BikerAnimationContainer = styled.div<{
       transform-origin: center;
       transform: translate(
         ${(props) =>
-          props.scrollPosition >= props.points[2] ? "-10px, -10px" : 0}
+          props.scrollPosition >= props.points[2] ? '-10px, -10px' : 0}
       );
     }
 
@@ -152,7 +152,7 @@ export const BikerAnimationContainer = styled.div<{
       transform-origin: center;
       transform: translate(
         ${(props) =>
-          props.scrollPosition >= props.points[2] ? "-10px, +10px" : 0}
+          props.scrollPosition >= props.points[2] ? '-10px, +10px' : 0}
       );
     }
 
@@ -162,7 +162,7 @@ export const BikerAnimationContainer = styled.div<{
       transform-origin: center;
       transform: translate(
         ${(props) =>
-          props.scrollPosition >= props.points[2] ? "+10px, +10px" : 0}
+          props.scrollPosition >= props.points[2] ? '+10px, +10px' : 0}
       );
     }
   }
